@@ -264,6 +264,12 @@ config QCOM_FASTRPC
 	  applications DSP processor. Say M if you want to enable this
 	  module.
 
+config CPU_POWER_TOGGLE
+    bool "CPU/GPU frequency limit toggle"
+    default n
+    help
+      Adds a sysfs node to switch between performance and battery-friendly max frequencies.
+
 config SGI_GRU
 	tristate "SGI GRU driver"
 	depends on X86_UV && SMP
